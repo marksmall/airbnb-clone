@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter, Nunito } from "next/font/google";
 
 import Navbar from "~/components/navbar/Navbar";
+import ToasterProvider from "~/providers/ToasterProvider";
 
 import LoginModal from "~/components/modals/LoginModal";
 import RegisterModal from "~/components/modals/RegisterModal";
@@ -22,6 +23,8 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <body className={nunito.className}>
+        <ToasterProvider />
+
         <LoginModal />
         <RegisterModal />
 
