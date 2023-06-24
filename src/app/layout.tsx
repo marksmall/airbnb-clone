@@ -6,6 +6,7 @@ import ToasterProvider from "~/providers/ToasterProvider";
 
 import LoginModal from "~/components/modals/LoginModal";
 import RegisterModal from "~/components/modals/RegisterModal";
+import RentModal from "~/components/modals/RentModal";
 
 import { getCurrentUser } from "~/app/actions/getCurrentUser";
 
@@ -27,6 +28,7 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
 
         <LoginModal />
         <RegisterModal />
+        <RentModal />
 
         <Navbar user={currentUser} />
 
