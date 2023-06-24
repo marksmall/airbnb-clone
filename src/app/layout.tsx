@@ -7,8 +7,10 @@ import ToasterProvider from "~/providers/ToasterProvider";
 import LoginModal from "~/components/modals/LoginModal";
 import RegisterModal from "~/components/modals/RegisterModal";
 import RentModal from "~/components/modals/RentModal";
+import SearchModal from "~/components/modals/SearchModal";
 
 import { getCurrentUser } from "~/app/actions/getCurrentUser";
+import { Suspense } from "react";
 
 // const inter = Inter({ subsets: ['latin'] })
 const nunito = Nunito({ subsets: ["latin"] });
@@ -29,6 +31,9 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
         <LoginModal />
         <RegisterModal />
         <RentModal />
+        <Suspense fallback={<div>Loading SearchModal</div>}>
+          <SearchModal />
+        </Suspense>
 
         <Navbar user={currentUser} />
 
