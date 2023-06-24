@@ -1,3 +1,5 @@
+# AirBNB Clone
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -17,6 +19,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Setup
+
+To make this app work, you will need to setup:
+
+- [MongoDB Atlas](https://cloud.mongodb.com/)
+- [next-auth](https://next-auth.js.org/)
+- [GitHub](https://github.com) - To setup social login
+- [Google](https://console.cloud.google.com/) - To setup social login
+- [Cloudinary](https://console.cloudinary.com/) - To upload/retrieve images
+
+You can configure these by setting Environment variables in `.env` for **prisma**, setting the `DATABASE_URL` and in `.env.local`, see `.env.example` for a list of variables that need to be configured.
 
 ## Learn More
 
